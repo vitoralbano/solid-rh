@@ -6,7 +6,7 @@ import br.com.alura.rh.model.Funcionario;
 
 public class PromocaoService {
     public void promover(Funcionario funcionario, boolean metaBatida) {
-        if (Cargo.GERENTE == funcionario.getCargo()) {
+        if (Cargo.GERENTE == funcionario.getDadosPessoais().getCargo()) {
             throw new ValidacaoException("Gerentes nao podem ser promovidos!");
         }
 
@@ -14,7 +14,7 @@ public class PromocaoService {
             throw new ValidacaoException("Funcionario nao bateu a meta.");
         }
 
-        var novoCargo = funcionario.getCargo().proximoCargo();
+        var novoCargo = funcionario.getDadosPessoais().getCargo().proximoCargo();
         funcionario.promover(novoCargo);
     }
 }
