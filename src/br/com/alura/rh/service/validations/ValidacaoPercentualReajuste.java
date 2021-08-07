@@ -1,6 +1,6 @@
-package br.com.alura.rh.service;
+package br.com.alura.rh.service.validations;
 
-import br.com.alura.rh.ValidacaoException;
+import br.com.alura.rh.exceptions.ValidacaoException;
 import br.com.alura.rh.model.Funcionario;
 import br.com.alura.rh.validations.ValidacaoReajuste;
 
